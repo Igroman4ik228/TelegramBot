@@ -11,6 +11,10 @@ bot = Bot(os.getenv('TOKEN'))
 dp = Dispatcher()
 
 
+def start_bot():
+    asyncio.run(main())
+
+
 # Запуск процесса поллинга новых апдейтов
 async def main():
     print("Online")
@@ -43,5 +47,3 @@ async def cmd_answer(message: types.Message):
 @dp.message(Command("reply"))
 async def cmd_reply(message: types.Message):
     await message.reply('Это ответ с "ответом"')
-
-asyncio.run(main())
