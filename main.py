@@ -7,4 +7,3 @@ if __name__ == "__main__":
     thParser.start()
 
     Bot.start_bot()
-
