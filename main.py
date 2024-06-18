@@ -6,7 +6,7 @@ import logging.config
 from logging import getLogger
 
 
-with open("logging.conf") as file:
+with open("logging.conf.json") as file:
     config = json.load(file)
 
 logging.config.dictConfig(config)
