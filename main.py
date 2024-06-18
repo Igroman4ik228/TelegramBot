@@ -1,9 +1,19 @@
-import modules.Bot as Bot
-import modules.Parser as Parser
+import json
+import modules.bot as bot
+import modules.parser as parser
 from threading import Thread
+import logging.config
+from logging import getLogger
+
+
+with open("logging.conf") as file:
+    config = json.load(file)
+
+logging.config.dictConfig(config)
+logger = getLogger()
 
 if __name__ == "__main__":
-    thParser = Thread(target=Parser.main, args=())
+    thParser = Thread(target=parser.main, args=())
     thParser.start()
 
-    Bot.start_bot()
+    bot.start_bot()

@@ -17,7 +17,6 @@ def start_bot():
 
 # Запуск процесса поллинга новых апдейтов
 async def main():
-    print("Online")
     await dp.start_polling(bot)
 
 
