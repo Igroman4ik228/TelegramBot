@@ -27,7 +27,8 @@ async def cmd_start(message: types.Message):
     await message.answer("Здравствуйте, вас приветствует элитный бот расписания")
 
 
-@dp.message(Command("start"))
-async def cmd_start(message: types.Message):
+@dp.message(Command("расписание"))
+async def shedule(message: types.Message):
     """расписание"""
-    await message.answer("")
+    await message.answer("Расписание на сегодня\n"
+                         "1:""ноу")

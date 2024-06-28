@@ -1,11 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 from config import Url, MyGroup
+from logging import getLogger
+logger = getLogger(__name__)
 
 
 def main():
     response = requests.get(Url)
     response.encoding = 'utf-8'
+
     try:
         if response.status_code == 200:
 
@@ -37,24 +40,22 @@ def main():
                 group = cells[1].text.strip()
 
                 if group != "" and group != " " and group != "\n" and group == MyGroup:
-
-                    numbers_replacement_lessons = cells[2].text.strip()
-                    valid_replacement = validate_numbers_replacement_lessons(numbers_replacement_lessons)
-
                     if cells[5].text.strip() != "":
                         row_data = f"{cells[4].text.strip()} {cells[5].text.strip()} (❗ замена)"
                     else:
                         row_data = f"{cells[4].text.strip()} (❗ замена)"
 
+                    numbers_replacement_lessons = cells[2].text.strip()
+                    valid_replacement = validate_numbers_replacement_lessons(numbers_replacement_lessons)
                     for number in valid_replacement:
                         group_data[number] = [number, row_data]
 
-            print(group_data)
+            logger.info(f"{group_data}")
         else:
-            raise Exception(f"Ошибка {response.status_code}")
+            raise Exception(f"Ошибка сети: {response.status_code}")
 
     except Exception as e:
-        print(e)
+        logger.error(e)
         return
 
 
@@ -89,6 +90,8 @@ def validate_numbers_replacement_lessons(numbers_replacement_lessons: str):
     elif len(numbers_replacement_lessons) == 1:
         valid_nums_list.append(int(numbers_replacement_lessons))
     else:
-        raise ValueError(f"Invalid format: {numbers_replacement_lessons}")
+        raise Exception(f"Неправильный формат номера замены: {numbers_replacement_lessons}")
 
     return valid_nums_list
+
+
