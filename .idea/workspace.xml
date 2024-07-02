@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11335eb9-6aae-41b9-b6e9-9f7df22f6a9e" name="Changes" comment="Rename logging.conf to logging.conf.json">
-      <change afterPath="$PROJECT_DIR$/modules/bot/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/bot/keyboards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BotTelegram.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BotTelegram.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="11335eb9-6aae-41b9-b6e9-9f7df22f6a9e" name="Changes" comment="add main keyboard&#10;add requirements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/bot/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestValidateNumbersReplacementLessons.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718702983212</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add main keyboard&#10;add requirements">
+      <option name="closed" value="true" />
+      <created>1719946702440</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719946702440</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -210,6 +211,7 @@
     <MESSAGE value="Refactor Parser and add models, config, logging" />
     <MESSAGE value="Rename logging.conf to logging.conf.json" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="add main keyboard&#10;add requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="add main keyboard&#10;add requirements" />
   </component>
 </project>
