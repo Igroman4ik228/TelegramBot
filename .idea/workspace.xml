@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11335eb9-6aae-41b9-b6e9-9f7df22f6a9e" name="Changes" comment="Rename logging.conf to logging.conf.json">
-      <change afterPath="$PROJECT_DIR$/modules/dbcontext.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/models/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/models/schedule.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/repositories/result_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/repositories/schedule_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/repositories/users_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/bot/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/bot/keyboards.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/BotTelegram.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BotTelegram.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/models/dbcontext.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/models/default.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/models/replacment.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/models/result.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/models/result.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/models/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/models/users.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/bot/bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestValidateNumbersReplacementLessons.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +42,7 @@
   }
 }</component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -78,11 +70,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "E:/DevProjects/Python/BotTelegram/main.py",
+    "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\DevProjects\Python\BotTelegram\modules\bot" />
       <recent name="C:\Users\vital\PycharmProjects\TelegramBot\modules" />
     </key>
   </component>
@@ -191,6 +185,17 @@
                   <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
@@ -204,6 +209,7 @@
     <MESSAGE value="Refactor Parser and add models, config" />
     <MESSAGE value="Refactor Parser and add models, config, logging" />
     <MESSAGE value="Rename logging.conf to logging.conf.json" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename logging.conf to logging.conf.json" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
 </project>

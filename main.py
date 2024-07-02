@@ -1,5 +1,5 @@
 import json
-import modules.bot as bot
+import modules.bot.bot as bot
 import modules.parser as parser
 from threading import Thread
 import logging.config
