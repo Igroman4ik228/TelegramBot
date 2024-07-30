@@ -1,7 +1,9 @@
-import requests
 from bs4 import BeautifulSoup
 from config import Url, MyGroup
 from logging import getLogger
+
+import requests
+
 logger = getLogger(__name__)
 
 
@@ -26,13 +28,13 @@ def main():
                 raise Exception("Не найдены строки в таблице")
 
             group_data = [
-                [0, ""],
-                [1, ""],
-                [2, ""],
-                [3, ""],
-                [4, ""],
-                [5, ""],
-                [6, ""]
+                [0, None],
+                [1, None],
+                [2, None],
+                [3, None],
+                [4, None],
+                [5, None],
+                [6, None]
             ]
 
             for row in rows:
@@ -93,5 +95,3 @@ def validate_numbers_replacement_lessons(numbers_replacement_lessons: str):
         raise Exception(f"Неправильный формат номера замены: {numbers_replacement_lessons}")
 
     return valid_nums_list
-
-
