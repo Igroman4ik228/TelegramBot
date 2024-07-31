@@ -11,9 +11,8 @@ class ScheduleRepository:
     def __init__(self, session):
         self.session = session
 
-    def create(self, week_schedule, weekday, data_lessons, is_replacement=False):
-        # Пример использования сессии для добавления данных
-        new_schedule = Schedule(is_replacement=is_replacement,
+    def create(self, week_schedule, weekday, data_lessons):
+        new_schedule = Schedule(
                                 week_schedule=week_schedule,
                                 weekday=weekday,
                                 data_lessons=data_lessons)

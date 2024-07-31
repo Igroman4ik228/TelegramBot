@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11335eb9-6aae-41b9-b6e9-9f7df22f6a9e" name="Changes" comment="rename logger.conf.json">
-      <change afterPath="$PROJECT_DIR$/modules/bot/handlers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BotTelegram.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BotTelegram.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Changes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Changes.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/bot/bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/bot/bot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/bot/keyboards.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/bot/keyboards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/models/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/models/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/models/schedule.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/models/schedule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/repositories/schedule_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/repositories/schedule_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/DevProjects/Python/BotTelegram/main.py",
+    "last_opened_file_path": "C:/Users/vital/PycharmProjects/Bot/TelegramBot",
     "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "application.passwordSafe"
   }
@@ -105,7 +107,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
+        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
