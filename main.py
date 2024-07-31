@@ -13,7 +13,8 @@ logging.config.dictConfig(config)
 logger = getLogger()
 
 if __name__ == "__main__":
-    thParser = Thread(target=parser.main, args=())
+    thParser = Thread(target=parser.main_parse, args=())
     thParser.start()
 
     bot.start_bot()
+    

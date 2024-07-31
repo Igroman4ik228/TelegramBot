@@ -1,13 +1,13 @@
 from bs4 import BeautifulSoup
 from config import Url, MyGroup
 from logging import getLogger
+from modules.builder import main_build
 
 import requests
 
 logger = getLogger(__name__)
 
-
-def main():
+def main_parse():
     response = requests.get(Url)
     response.encoding = 'utf-8'
 
@@ -15,6 +15,9 @@ def main():
         if response.status_code == 200:
 
             soup = BeautifulSoup(response.text, 'lxml')
+            
+            day_of_week = get_day_of_week(soup)
+            
             data = soup.find('table')
 
             if data is None:
@@ -51,8 +54,12 @@ def main():
                     valid_replacement = validate_numbers_replacement_lessons(numbers_replacement_lessons)
                     for number in valid_replacement:
                         group_data[number] = [number, row_data]
-
+            
             logger.info(f"{group_data}")
+            
+            # Build current lesson
+            main_build(group_data, day_of_week)
+            
         else:
             raise Exception(f"Ошибка сети: {response.status_code}")
 
@@ -95,3 +102,10 @@ def validate_numbers_replacement_lessons(numbers_replacement_lessons: str):
         raise Exception(f"Неправильный формат номера замены: {numbers_replacement_lessons}")
 
     return valid_nums_list
+
+
+
+def get_day_of_week(soup):
+    data = soup.find_all('div')
+    full_day_of_week = data[2].get_text()
+    return str.split(full_day_of_week, ' ')[-1]

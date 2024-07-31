@@ -1,4 +1,4 @@
-from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 from dotenv import load_dotenv, find_dotenv
 import os
 
@@ -21,12 +21,21 @@ def main_kb(user_telegram_id: int):
                                    input_field_placeholder="Выберите пункт меню")
     return keyboard
 
-def setting_kb(user_telegram_id: int):
+def admin_kb():
     kb_list = [
-        [KeyboardButton(text="🔔🔕 Уведомление"), KeyboardButton(text="Смена роли"),],
-        [KeyboardButton(text="🔙 Назад")]
+        [KeyboardButton(text="Глобальное сообщение"), KeyboardButton(text="Принудительный парсинг"),],
+        [KeyboardButton(text="Вывод лог ошибок")]
     ]
     keyboard = ReplyKeyboardMarkup(keyboard=kb_list,
                                    resize_keyboard=True,
                                    input_field_placeholder="Выберите пункт меню")
+    return keyboard
+
+# todo
+def setting_kb():
+    kb_list = [
+        [InlineKeyboardButton(text="🔔🔕 Уведомление", callback_data="Notification"), InlineKeyboardButton(text="Смена роли", callback_data="Role")]
+    ]
+    keyboard = InlineKeyboardMarkup(inline_keyboard=kb_list, 
+                                    text="Настройки")
     return keyboard

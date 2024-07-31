@@ -13,19 +13,20 @@ async def cmd_start(message: types.Message):
 
 
 @router.message(F.text.lower().contains("расписание"))
-@router.message(Command("shedule"))
-async def shedule(message: types.Message):
-    await message.answer("Расписание на сегодня")
+@router.message(Command("schedule"))
+async def schedule(message: types.Message):
+    await message.answer("Расписание на сегодня") # Из бд 
     
     
 @router.message(F.text.lower().contains("настройки"))
 @router.message(Command("settings"))
-async def shedule(message: types.Message):
-    await message.answer("Настройки бота... (пока что ничего нету)",
-                         reply_markup=setting_kb(message.from_user.id))
+async def setting(message: types.Message):
+    await message.reply("Настройки бота...",
+                         reply_markup=setting_kb())
 
-@router.message(F.text.lower().contains("назад"))
-async def shedule(message: types.Message):
-    await message.answer("Возврат в главное меню...",
-                         reply_markup=main_kb(message.from_user.id))
+# todo
+@router.callback_query(lambda c: c.data == 'Notification')
+async def process_notification_callback(callback_query: types.CallbackQuery):
+    await callback_query.answer()
+    await callback_query.message.answer("Вы нажали кнопку уведомлений.")
 
