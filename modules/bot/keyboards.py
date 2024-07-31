@@ -21,6 +21,7 @@ def main_kb(user_telegram_id: int):
                                    input_field_placeholder="Выберите пункт меню")
     return keyboard
 
+
 def admin_kb():
     kb_list = [
         [KeyboardButton(text="Глобальное сообщение"), KeyboardButton(text="Принудительный парсинг"),],
@@ -31,10 +32,14 @@ def admin_kb():
                                    input_field_placeholder="Выберите пункт меню")
     return keyboard
 
-# todo
-def setting_kb():
+
+# todo: callback ToggleNotification, callback ToggleRole
+def setting_kb(user_telegram_id: int, user_notification_state):
+    notification_state = user_notification_state.get(str(user_telegram_id), False)
+    
+    notification_text = "🔔 Уведомление включены" if notification_state else "🔕 Уведомление отключены"
     kb_list = [
-        [InlineKeyboardButton(text="🔔🔕 Уведомление", callback_data="Notification"), InlineKeyboardButton(text="Смена роли", callback_data="Role")]
+        [InlineKeyboardButton(text=notification_text, callback_data="ToggleNotification"), InlineKeyboardButton(text="Смена роли", callback_data="ToggleRole")]
     ]
     keyboard = InlineKeyboardMarkup(inline_keyboard=kb_list, 
                                     text="Настройки")

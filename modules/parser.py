@@ -16,8 +16,6 @@ def main_parse():
 
             soup = BeautifulSoup(response.text, 'lxml')
             
-            day_of_week = get_day_of_week(soup)
-            
             data = soup.find('table')
 
             if data is None:
@@ -57,6 +55,7 @@ def main_parse():
             
             logger.info(f"{group_data}")
             
+            day_of_week = get_day_of_week(soup)
             # Build current lesson
             main_build(group_data, day_of_week)
             

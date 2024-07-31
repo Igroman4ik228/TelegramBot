@@ -11,12 +11,9 @@ Base = declarative_base()
 
 def get_engine():
     is_debug = os.getenv('ISDEBUG')
-
-    if is_debug:
-        sql_connection = os.getenv('SQL_CONNECTION_DEBUG')
-    else:
-        sql_connection = os.getenv('SQL_CONNECTION_RELEAS')
-
+    
+    sql_connection = os.getenv('SQL_CONNECTION_DEBUG') if is_debug else os.getenv('SQL_CONNECTION_RELEAS')
+    
     engine = db.create_engine(sql_connection)
 
     return engine

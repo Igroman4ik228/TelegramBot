@@ -9,3 +9,4 @@ class User(Base):
     is_admin = Column(Boolean, default=False)
     name = Column(String(124))
     telegram_id = Column(Integer)
+    # ToDo notification_status: true - получать пуш уведомления при обновлении расписания, False - не получать
