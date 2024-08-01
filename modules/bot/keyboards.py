@@ -33,13 +33,12 @@ def admin_kb():
     return keyboard
 
 
-# todo: callback ToggleNotification, callback ToggleRole
-def setting_kb(user_telegram_id: int, user_notification_state):
-    notification_state = user_notification_state.get(str(user_telegram_id), False)
+# todo: callback ToggleNotification, callback WriteDefaultSchedule
+def setting_kb(user_telegram_id: int):
     
-    notification_text = "🔔 Уведомление включены" if notification_state else "🔕 Уведомление отключены"
+    notification_text = "🔔 Уведомление включены"
     kb_list = [
-        [InlineKeyboardButton(text=notification_text, callback_data="ToggleNotification"), InlineKeyboardButton(text="Смена роли", callback_data="ToggleRole")]
+        [InlineKeyboardButton(text=notification_text, callback_data="ToggleNotification"), InlineKeyboardButton(text="Вывести обычное расписание", callback_data="WriteDefaultSchedule")],
     ]
     keyboard = InlineKeyboardMarkup(inline_keyboard=kb_list, 
                                     text="Настройки")

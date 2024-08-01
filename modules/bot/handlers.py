@@ -1,12 +1,9 @@
 from aiogram import types, F, Router
 from aiogram.filters import CommandStart, Command
 
-from .test import load_notification_state, save_notification_state
 from .keyboards import main_kb, setting_kb
 
 router = Router()
-
-user_notification_state = load_notification_state()
 
 @router.message(CommandStart())
 async def cmd_start(message: types.Message):
@@ -24,7 +21,7 @@ async def schedule(message: types.Message):
 @router.message(Command("settings"))
 async def setting(message: types.Message):
     await message.reply("Настройки бота...",
-                         reply_markup=setting_kb(message.from_user.id, user_notification_state))
+                         reply_markup=setting_kb(message.from_user.id))
 
 
 # @router.callback_query(lambda c: c.data == "ToggleNotification")
