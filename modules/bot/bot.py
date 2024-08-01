@@ -23,4 +23,3 @@ async def main():
     # await bot.delete_webhook(True)  Это позволяет пропускать сообщения, которые приходили в офлайн бота
     await dp.start_polling(bot)
 
-

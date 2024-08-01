@@ -1,10 +1,12 @@
 from aiogram import types, F, Router
 from aiogram.filters import CommandStart, Command
 
+from .test import load_notification_state, save_notification_state
 from .keyboards import main_kb, setting_kb
 
 router = Router()
 
+user_notification_state = load_notification_state()
 
 @router.message(CommandStart())
 async def cmd_start(message: types.Message):
@@ -13,19 +15,29 @@ async def cmd_start(message: types.Message):
 
 
 @router.message(F.text.lower().contains("расписание"))
-@router.message(Command("shedule"))
-async def shedule(message: types.Message):
-    await message.answer("Расписание на сегодня")
+@router.message(Command("schedule"))
+async def schedule(message: types.Message):
+    await message.answer("Расписание на сегодня") # Из бд 
     
     
 @router.message(F.text.lower().contains("настройки"))
 @router.message(Command("settings"))
-async def shedule(message: types.Message):
-    await message.answer("Настройки бота... (пока что ничего нету)",
-                         reply_markup=setting_kb(message.from_user.id))
+async def setting(message: types.Message):
+    await message.reply("Настройки бота...",
+                         reply_markup=setting_kb(message.from_user.id, user_notification_state))
 
-@router.message(F.text.lower().contains("назад"))
-async def shedule(message: types.Message):
-    await message.answer("Возврат в главное меню...",
-                         reply_markup=main_kb(message.from_user.id))
 
+# @router.callback_query(lambda c: c.data == "ToggleNotification")
+# async def toggle_notification_callback(callback_query: types.CallbackQuery):
+    
+#     current_state = user_notification_state.get(str(callback_query.from_user.id), False)
+#     new_state = not current_state
+#     user_notification_state[callback_query.from_user.id] = new_state
+    
+#     save_notification_state(user_notification_state)
+
+#     notification_text = "включены" if new_state else "отключены"
+#     await callback_query.answer(f"Уведомления {notification_text}!")
+    
+#     new_reply_markup = setting_kb(callback_query.from_user.id, user_notification_state)
+#     await callback_query.message.edit_reply_markup(reply_markup=new_reply_markup)
